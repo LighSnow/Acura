@@ -1,0 +1,96 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+body {
+  font-family: $font-main;
+  line-height: 1.2;
+
+  // background-color: #161819;
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: $transition-color, $transition-bg, $transition-opacity;
+
+  &::after,
+  &::before {
+    transition: inherit;
+  }
+
+
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+
+.btn {
+  font-size: 14px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+
+  &-bg {
+    color: $white;
+    @include bg-hover(background-color, $second-color, $white);
+    @include color-hover(color, $white, $black);
+  }
+
+  &-white {
+    @include bg-hover(background-color, $white, $second-color);
+    @include color-hover(color, $black, $white);
+  }
+}
+
+.section {
+  &__title {
+    font-size: 40px;
+    font-weight: 900;
+
+    @include adaptive767 {
+      font-size: 32px;
+    }
+  }
+}
+
+.form {
+  input {
+    font-family: $font-second;
+  }
+}

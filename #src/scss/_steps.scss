@@ -1,0 +1,154 @@
+.steps {
+
+  .container {
+    max-width: 1920px;
+    padding: 0;
+  }
+
+  // .steps__inner
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  // .steps__columns
+
+  &__columns {
+    width: 100%;
+    display: flex;
+    // align-items: center;
+  }
+
+  // .steps__column
+
+  &__column {
+    max-width: 650px;
+    width: 100%;
+
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    padding: 78px 0 60px 0;
+    @include adaptive1366 {
+      padding: 50px 15px 50px;
+      max-width: 585px;
+      margin-left: auto;
+    }
+    @include adaptive950 {
+      max-width: 495px;
+    }
+    @include adaptive767 {
+      width: 100%;
+      max-width: 100%;
+      align-items: center;
+    }
+  }
+
+  &__column-image {
+    width: 46%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: url(../img/steps/steps.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include adaptive1366 {
+      background-position: left center;
+      // width: 100%;
+    }
+    @include adaptive767 {
+      display: none;
+    }
+  }
+
+  // .steps__title
+
+  &__title {
+    margin: 0px 0px 75px 0px;
+
+    @media (max-width: 1600px) {
+      margin: 0px 0px 75px -2px;
+    }
+    @include adaptive1366 {
+      text-align: center;
+      margin: 0px 0px 50px 0px;
+
+    }
+  }
+
+  // .steps__column-body
+
+  &__column-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // margin: 0px 0px 0px 60px;
+  }
+
+  // .steps__item
+
+  &__item {
+    display: flex;
+    margin: 0px 0px 39px 0px;
+
+    // align-items: center;
+    &:last-of-type {
+      margin: 0px 0px 30px 0px;
+    }
+
+    &-image {
+      max-width: 43px;
+      height: 43px;
+      margin: 2px 21px 0px 0px;
+      @include adaptive767 {
+        margin: 2px 15px 0px 0px;
+      }
+    }
+  }
+
+  &__item-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // // .steps__item-title
+
+  &__item-title {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0px 0px 8px 0px;
+    @include adaptive767 {
+      font-size: 20px;
+    }
+  }
+
+  //  .steps__-item-text
+
+  &__item-text {
+    max-width: 262px;
+    width: 100%;
+    font-size: 14px;
+    color: $main-color;
+  }
+
+  .btn {
+    align-self: flex-start;
+    padding: 18px 65px;
+    margin: 0px 0px 0px 70px;
+    @include adaptive767 {
+      align-self: center;
+      margin: 0;
+    }
+  }
+}
+
+.container {}
+
+
+
+.btn-bg {}

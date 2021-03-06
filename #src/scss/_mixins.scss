@@ -1,0 +1,49 @@
+@mixin adaptive1366 {
+  @media(max-width: 1366px) {
+    @content;
+  }
+}
+@mixin adaptive1200 {
+  @media(max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin adaptive950 {
+  @media(max-width: 950px) {
+    @content;
+  }
+}
+
+@mixin adaptive767 {
+  @media(max-width: 767px) {
+    @content;
+  }
+}
+@mixin adaptive500 {
+  @media(max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin adaptive374 {
+  @media(max-width: 374px) {
+    @content;
+  }
+}
+
+@mixin color-hover($property, $main-color, $hover-color) {
+  #{$property}: $main-color;
+
+  &:hover {
+    #{$property}: $hover-color;
+  }
+}
+
+@mixin bg-hover($property, $main-color, $hover-color) {
+  #{$property}: $main-color;
+
+  &:hover {
+    #{$property}: $hover-color;
+  }
+}

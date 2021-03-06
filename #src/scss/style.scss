@@ -1,0 +1,38 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"),
+		url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+// @font-face {
+//   font-family: "ArcaMajora3-Bold",sans-serif;
+//   font-display: swap;
+//   src: url("../fonts/ArcaMajora3-Bold.otf") format("otf");
+//   font-weight: 700;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: "ArcaMajora3-Heavy",sans-serif;
+//   font-display: swap;
+//   src: url("../fonts/ArcaMajora3-Heavy.otf") format("otf");
+//   font-weight: 900;
+//   font-style: normal;
+// }
+
+@import "fonts";
+@import "vars";
+@import "mixins";
+@import "normalize";
+@import "global";
+@import "header";
+@import "intro";
+@import "steps";
+@import "perfect-cars";
+@import "customers-reviews";
+@import "footer";
+
